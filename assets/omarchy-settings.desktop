@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=System Settings
+GenericName=System Settings
+Comment=Configure your Omarchy system settings
+Exec=omarchy-settings
+Icon=omarchy-settings
+Terminal=false
+StartupNotify=true
+Categories=Settings;System;GTK;
+Keywords=settings;system;preferences;hyprland;omarchy;wifi;bluetooth;display;sound;audio;network;power;battery;
+StartupWMClass=hyprland-settings
