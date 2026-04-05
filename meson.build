@@ -104,3 +104,7 @@ executable('system-settings',
   dependencies: [gtk_dep, adw_dep, glib_dep, gio_dep, sourceview_dep],
   install: true
 )
+
+install_data('data/system-settings.desktop',
+  install_dir: join_paths(get_option('datadir'), 'applications')
+)
