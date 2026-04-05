@@ -1,1 +1,23 @@
-/target
+# Meson and Ninja
+build/
+subprojects/
+
+# C artifacts
+*.o
+*.a
+*.so
+system-settings
+
+# Logs
+*.log
+build_output.log
+
+# Editor and LSP
+.cache/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store

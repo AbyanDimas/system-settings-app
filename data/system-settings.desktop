@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=System Settings
+Comment=System settings and configuration
+Exec=system-settings
+Icon=org.gnome.Settings
+Terminal=false
+Type=Application
+Categories=Settings;HardwareSettings;

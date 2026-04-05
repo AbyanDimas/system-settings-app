@@ -1,0 +1,215 @@
+/* =====================================================
+   Omarchy Settings — macOS-inspired design
+   ===================================================== */
+
+/* ---- Window ---- */
+window.settings-window {
+    border-radius: 12px;
+    background-color: @window_bg_color;
+}
+
+/* ---- Sidebar ---- */
+.sidebar-page {
+    background-color: alpha(@window_bg_color, 0.85);
+    border-right: 1px solid alpha(@borders, 0.5);
+}
+
+/* ---- Sidebar Search Entry ---- */
+.sidebar-page searchentry {
+    border-radius: 10px;
+    min-height: 36px;
+    margin: 8px 12px 4px 12px;
+    background-color: alpha(@headerbar_bg_color, 0.8);
+}
+
+/* ---- Sidebar rows (macOS list-style) ---- */
+.settings-sidebar row {
+    border-radius: 8px;
+    margin: 1px 8px;
+    padding: 4px 2px;
+    transition: background-color 150ms ease;
+}
+
+.settings-sidebar row:hover {
+    background-color: alpha(@accent_bg_color, 0.12);
+}
+
+.settings-sidebar row:selected {
+    background-color: alpha(@accent_bg_color, 0.2);
+    color: @accent_fg_color;
+}
+
+/* ---- Preferences groups (card-like) ---- */
+preferencesgroup>box.header>label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: alpha(@theme_fg_color, 0.55);
+    margin-bottom: 2px;
+}
+
+preferencesgroup>box {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px alpha(black, 0.12);
+}
+
+/* Individual rows inside a group */
+preferencesgroup row {
+    border-radius: 0;
+    transition: background-color 120ms ease;
+}
+
+preferencesgroup row:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+preferencesgroup row:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+preferencesgroup row:first-child:last-child {
+    border-radius: 12px;
+}
+
+/* ---- Switch rows ---- */
+switch {
+    border-radius: 100px;
+    min-width: 48px;
+    min-height: 28px;
+    transition: background-color 200ms ease;
+}
+
+switch:checked {
+    background-color: @accent_bg_color;
+}
+
+switch slider {
+    border-radius: 100px;
+    min-width: 22px;
+    min-height: 22px;
+    box-shadow: 0 1px 3px alpha(black, 0.35);
+    margin: 3px;
+    background-color: white;
+}
+
+/* ---- Buttons ---- */
+button.suggested-action {
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
+    font-weight: 600;
+    transition: all 150ms ease;
+}
+
+button.suggested-action:hover {
+    background-color: shade(@accent_bg_color, 1.1);
+}
+
+button.suggested-action:active {
+    transform: scale(0.97);
+}
+
+button.destructive-action {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+/* ---- Entry rows ---- */
+entry {
+    border-radius: 8px;
+    padding: 4px 10px;
+    transition: border-color 150ms ease;
+}
+
+/* ---- Scale (sliders) ---- */
+scale trough {
+    border-radius: 100px;
+    min-height: 4px;
+}
+
+scale slider {
+    border-radius: 100px;
+    min-width: 18px;
+    min-height: 18px;
+    background-color: @accent_bg_color;
+    box-shadow: 0 1px 4px alpha(black, 0.3);
+    transition: transform 120ms ease;
+}
+
+scale slider:hover {
+    transform: scale(1.1);
+}
+
+/* ---- ScrolledWindow ---- */
+scrolledwindow {
+    border-radius: 10px;
+}
+
+/* ---- Source View (Waybar editor) ---- */
+textview {
+    border-radius: 10px;
+    padding: 8px;
+    font-family: "JetBrains Mono", "Monospace", monospace;
+    font-size: 13px;
+}
+
+/* ---- Status page (home) ---- */
+statuspage .icon {
+    opacity: 0.4;
+}
+
+/* ---- Icon styling in sidebar rows ---- */
+.sidebar-icon {
+    -gtk-icon-size: 20px;
+    color: @accent_bg_color;
+    margin: 0 4px;
+}
+
+/* ---- Headerbar ---- */
+headerbar {
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid alpha(@borders, 0.5);
+    min-height: 56px;
+}
+
+headerbar windowcontrols {
+    margin: 0 8px;
+}
+
+/* ---- Toast overlay ---- */
+.toast {
+    border-radius: 12px;
+}
+
+/* ---- Wallpaper grid ---- */
+.wallpaper-card {
+    border-radius: 10px;
+    margin: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px alpha(black, 0.25);
+    transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.wallpaper-card:hover {
+    box-shadow: 0 4px 16px alpha(black, 0.35);
+    transform: translateY(-2px);
+}
+
+.wallpaper-card.selected {
+    box-shadow: 0 0 0 3px @accent_bg_color;
+}
+
+/* ---- Badge / chip ---- */
+.keybind-badge {
+    background-color: alpha(@headerbar_bg_color, 0.9);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid alpha(@borders, 0.6);
+}
